@@ -6,7 +6,7 @@ Redis SCAN &amp; Batch Cleanup Keys (EXPIRE | UNLINK | DEL)
 ./shrediscaner.sh <Host> <Port> <ACT> <Pattern> [pass]
 
 ACT Options:
-  expire  # 设置失效时间
+  expire  # 设置失效时间 (1-9s随机)
   unlink  # 异步清理
   del     # 同步清理
 
