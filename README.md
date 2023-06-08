@@ -1,6 +1,10 @@
 # shrediscaner
 Redis SCAN &amp; Batch Cleanup Keys (EXPIRE | UNLINK | DEL)
 
+# Support
+- Redis 6
+- Redis 5
+
 # Usage
 ```SHELL
 ./shrediscaner.sh <Host> <Port> <ACT> <Pattern> [pass]
