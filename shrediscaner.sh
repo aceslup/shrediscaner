@@ -18,7 +18,7 @@ ACT Options:
   del     # 同步清理
 
 Example:
-  ./$0 127.0.0.1 6379 DEL "prefix_*" mypass
+  $0 127.0.0.1 6379 DEL "prefix_*" mypass
 
 EOF
     exit 1
