@@ -18,7 +18,7 @@ ACT Options:
   del     # 同步清理
 
 Example:
- ./scan_del.sh 127.0.0.1 6379 DEL "prefix_*" mypass
+ ./shrediscaner.sh 127.0.0.1 6379 DEL "prefix_*" mypass
 
 EOF
     exit 1
