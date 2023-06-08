@@ -2,6 +2,7 @@
 Redis SCAN &amp; Batch Cleanup Keys (EXPIRE | UNLINK | DEL)
 
 # Usage
+```SHELL
 ./shrediscaner.sh <Host> <Port> <ACT> <Pattern> [pass]
 
 ACT Options:
@@ -11,3 +12,4 @@ ACT Options:
 
 Example:
   ./shrediscaner.sh 127.0.0.1 6379 DEL "prefix_*" mypass
+```
