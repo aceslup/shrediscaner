@@ -2,6 +2,7 @@
 Redis SCAN &amp; Batch Cleanup Keys (EXPIRE | UNLINK | DEL)
 
 # Support
+- Redis 7
 - Redis 6
 - Redis 5
 
