@@ -121,7 +121,8 @@ MAIN() {
     SCAN_KEY
 
     # 对KEYS分批
-    [ -s ${MATCH_KEYS} ] && SPLIT_FILE
+    [ -s ${MATCH_KEYS} ] && SPLIT_FILE \
+        || echo "Nothing at all." >> ${LOGFILE}
 
     # 进行清理
     TAG=$(ls ${PREFIX}_${SUFFIX} 2>/dev/null)
