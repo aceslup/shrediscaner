@@ -82,19 +82,19 @@ SCAN_KEY() {
 
 _EXPIRE() {
     FILE=$1
-    awk -v TIME=$((RANDOM%9+1)) '{printf "*3\r\n$6\r\nEXPIRE\r\n$16\r\n%s\r\n$1\r\n%d\r\n", $0, TIME}' ${FILE} |\
+    awk -v TIME=$((RANDOM%9+1)) '{printf "*3\r\n$6\r\nEXPIRE\r\n$%s\r\n%s\r\n$1\r\n%d\r\n", length($0), $0, TIME}' ${FILE} |\
          ${CLI} ${OPTS} --pipe
 }
 
 _UNLINK() {
     FILE=$1
-    awk '{printf "*2\r\n$6\r\nUNLINK\r\n$16\r\n%s\r\n", $0}' ${FILE} |\
+    awk '{printf "*2\r\n$6\r\nUNLINK\r\n$%s\r\n%s\r\n", length($0), $0}' ${FILE} |\
          ${CLI} ${OPTS} --pipe
 }
 
 _DEL() {
     FILE=$1
-    awk '{printf "*2\r\n$3\r\nDEL\r\n$16\r\n%s\r\n", $0}' ${FILE} |\
+    awk '{printf "*2\r\n$3\r\nDEL\r\n$%s\r\n%s\r\n", length($0), $0}' ${FILE} |\
          ${CLI} ${OPTS} --pipe
 }
 
