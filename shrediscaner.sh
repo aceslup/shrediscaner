@@ -127,7 +127,7 @@ MAIN() {
 
     # 进行清理
     TAG=$(ls ${PREFIX}*${SUFFIX} 2>/dev/null)
-    [ -n ${TAG} ] && RESP_ACT ${ACT}
+    [ -n "${TAG}" ] && RESP_ACT ${ACT}
 }
 
 MAIN
