@@ -121,10 +121,11 @@ MAIN() {
     SCAN_KEY
 
     # 对KEYS分批
-    SPLIT_FILE
+    [ -s ${MATCH_KEYS} ] && SPLIT_FILE
 
     # 进行清理
-    RESP_ACT ${ACT}
+    TAG=$(ls ${PREFIX}_${SUFFIX} 2>/dev/null)
+    [ -n ${TAG} ] && RESP_ACT ${ACT}
 }
 
 MAIN
